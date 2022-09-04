@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
-    for i in my_list:
-        print('{:d}'.format(i))
+def square_matrix_simple(matrix=[]):
+    tmp = []
+    for x in matrix:
+        tmp.append(list(map(lambda x: x**2, x)))
+    return (tmp)
