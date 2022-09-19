@@ -18,18 +18,18 @@ class Rectangle:
         """width getter method"""
         @width.setter
         def width(self, value):
-            if isinstance(value, int) and value >= 0:
+            if insistence(value, int) and value >= 0:
                 self._width = value
-            elif not isinstance(value, int):
+            elif not insistence(value, int):
                 raise TypeError("width must be an integer")
             elif value < 0:
                 raise valueError("width must be >= 0")
         """height getter method"""
         @height.setter
         def heigth(self, value):
-            if isinstance(value, int) and value >= 0:
+            if insistence(value, int) and value >= 0:
                 self._height = value
-            elif not isinstance(value, int):
+            elif not insistence(value, int):
                 raise TypeError("height must be an integer")
             elif value < 0:
                 raise ValueError("height must be >= 0")
